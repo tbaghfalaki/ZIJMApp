@@ -113,5 +113,74 @@ $D$Rhat
 (Intercept)    1.001984    1.000450
 ```
 
+Compute risk prediction, as well as AUC and BS
+
+```
+# Compute risk prediction, as well as AUC and BS
+s1 = 35.5
+t1 = 1
+
+DD <- DP_SRE(
+  object = ZNB, s = s1, t = t1, offset = "lLibrarySize", n.chains = 1, n.iter = 6000, n.burnin = 3000,
+  n.thin = 1, dataLong = dataLong_v, dataSurv = dataSurv_v
+)
+
+Criteria(
+  s = s1, t = t1, Survt = dataSurv_v$GWDels,
+  CR = dataSurv_v$Deliverys, P = DD$DP$est, cause = 1
+)$Cri
+
+s1 = 36
+
+DD <- DP_SRE(
+  object = ZNB, s = s1, t = t1, offset = "lLibrarySize", n.chains = 1, n.iter = 6000, n.burnin = 3000,
+  n.thin = 1, dataLong = dataLong_v, dataSurv = dataSurv_v
+)
+
+Criteria(
+  s = s1, t = t1, Survt = dataSurv_v$GWDels,
+  CR = dataSurv_v$Deliverys, P = DD$DP$est, cause = 1
+)$Cri
+
+s1 = 36.5
+
+DD <- DP_SRE(
+  object = ZNB, s = s1, t = t1, offset = "lLibrarySize", n.chains = 1, n.iter = 6000, n.burnin = 3000,
+  n.thin = 1, dataLong = dataLong_v, dataSurv = dataSurv_v
+)
+
+Criteria(
+  s = s1, t = t1, Survt = dataSurv_v$GWDels,
+  CR = dataSurv_v$Deliverys, P = DD$DP$est, cause = 1
+)$Cri
+
+# Compute credible intervals for the predictions
+DD <- DP_SRE_CI(
+  object = ZNB, s = s1, t = t1, offset = "lLibrarySize", mi = 2, n.chains = 1, n.iter = 60, n.burnin = 30,
+  n.thin = 1, dataLong = dataLong_v, dataSurv = dataSurv_v
+)
+```
 
 
+```
+# Generate dynamic predictions for patient #10055
+par(mfrow=c(1,2))
+
+DPplot2(ZNB,
+        s = 30, id_new = 10055, by = 1, mi = 10, digits=0,
+        Marker_lab="Prevotella", Time_lab="Time (Week)", 
+        offset = "lLibrarySize",
+        n.chains = 1, n.iter = 2000, n.burnin = 1000,
+        dataLong = dataLong_v, dataSurv = dataSurv_v
+)
+title("ZINB", font.main=2, cex.main=1)
+
+DPplot2(ZNB,
+        s = 35, id_new = 10055, by = 1, mi = 10, digits=0,
+        Marker_lab="Prevotella", Time_lab="Time (Week)", 
+        offset = "lLibrarySize",
+        n.chains = 1, n.iter = 2000, n.burnin = 1000,
+        dataLong = dataLong_v, dataSurv = dataSurv_v
+)
+title("ZINB", font.main=2, cex.main=1)
+```
