@@ -186,7 +186,7 @@ title("ZINB", font.main=2, cex.main=1)
 
 Finally, the individual dynamic prediction (DP) is as follows:
 
-<img src="/Figure/preg_plot.png" alt="Description" width="600" height="400">
+<img src="/Figure/preg_plot.png" alt="Description" width="600" height="500">
 
 
 
