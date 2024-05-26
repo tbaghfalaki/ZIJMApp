@@ -1,3 +1,5 @@
+R code for ZINB joint modeling
+---------------
 
 ```
 # Clear all objects from the workspace
@@ -62,6 +64,100 @@ Z1NB <- ZIJMCV(
   family = "NB"
 )
 
+```
+The output of the package for estimation is as follows:
+
+```
+> Z1NB$Estimation
+$Count_model
+                         Est         SD        L_CI        U_CI     Rhat
+(Intercept)      4.314823359 0.22063872  3.85417074  4.73927679 1.071021
+gendermale       0.147060241 0.20401965 -0.25589916  0.56513281 1.027733
+obstime         -0.082278299 0.01104098 -0.10413032 -0.06090384 1.004544
+drugddI         -0.034428255 0.12556266 -0.27998438  0.21260648 1.008524
+prevOIAIDS      -1.196801915 0.15427707 -1.46152422 -0.85487660 1.074015
+AZTfailure      -0.056102666 0.15663429 -0.35515606  0.25343292 1.094113
+obstime:drugddI  0.009411766 0.01565015 -0.01977149  0.04073289 1.000102
+Dispersion       6.025612132 0.47599626  5.10965194  6.97086767 1.002437
+
+$Zero_inflated_model
+                   Est        SD      L_CI        U_CI     Rhat
+(Intercept) -4.2917028 0.9626093 -7.616277 -3.16781112 1.121065
+obstime     -0.4383768 0.2939147 -1.120063 -0.05192336 1.009535
+drugddI     -0.9990714 0.6548727 -2.391691  0.14064177 1.007103
+
+$Survival_model
+                     Est         SD        L_CI       U_CI      Rhat
+gendermale   -0.53072775 0.30891769 -1.11249107  0.1268829 1.0003303
+drugddI       0.39292943 0.23196269 -0.01255731  0.8768509 1.0006331
+prevOIAIDS    1.16057466 0.28195560  0.61569518  1.7130565 1.0058120
+AZTfailure    0.26261609 0.21941415 -0.14905035  0.7074987 1.0034592
+gamma_lambda -0.38611701 0.07464751 -0.54693312 -0.2464656 0.9996324
+gamma_pi      0.10413065 0.10629279 -0.08790489  0.3488038 1.0122079
+h1            0.08673818 0.07110144  0.01913615  0.2670304 1.0110370
+h2            0.17099632 0.13569690  0.02649546  0.5127538 1.0082621
+h3            0.11864850 0.11207866  0.01260471  0.3673736 1.0051442
+h4            0.23700319 0.25722658  0.02056355  0.8157685 1.0265779
+h5            0.36894298 0.48728188  0.01933185  1.4268546 1.0115499
+
+$D
+$D$D11
+$D$D11$est
+           Intercept      Slope
+Intercept 1.32317602 0.01066162
+Slope     0.01066162 0.01227506
+
+$D$D11$sd
+          Intercept       Slope
+Intercept 0.1144397 0.010198001
+Slope     0.0101980 0.001381679
+
+$D$D11$L
+          Intercept       Slope
+Intercept  1.113976 -0.00959100
+Slope     -0.009591  0.00974015
+
+$D$D11$U
+           Intercept      Slope
+Intercept 1.54872870 0.03089683
+Slope     0.03089683 0.01520182
+
+$D$D11$Rhat
+          Intercept     Slope
+Intercept 0.9996436 0.9994549
+Slope     0.9994549 1.0002050
+
+
+$D$D22
+$D$D22$est
+           Intercept      Slope
+Intercept 1.72049097 0.04406276
+Slope     0.04406276 0.22672109
+
+$D$D22$sd
+          Intercept     Slope
+Intercept 2.9608167 0.2768176
+Slope     0.2768176 0.2061384
+
+$D$D22$L
+           Intercept       Slope
+Intercept  0.1640189 -0.37373777
+Slope     -0.3737378  0.07042685
+
+$D$D22$U
+           Intercept     Slope
+Intercept 14.2602526 0.5963163
+Slope      0.5963163 0.6714977
+
+$D$D22$Rhat
+          Intercept    Slope
+Intercept  1.031298 1.085842
+Slope      1.085842 1.086394
+```
+
+Compute risk prediction, as well as AUC and BS
+
+```
 # Save the fitted model
 save(Z1NB, file="Z1_outNB2.RData")
 
