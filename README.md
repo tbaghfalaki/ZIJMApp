@@ -1,14 +1,17 @@
+# Description 
+The paper by Ganjali et al. (2024) presents two applications: pregnancy data and AIDS data. Both datasets are publicly available. Below are the implementation details and steps for computing the risk predictions.
 
-For implementingt the applications described by Ganjali et al. (2024) we need the ZI package and DPCri package which are available in [here](/Exam1.md)
- The codes can be found at https://github.com/tbaghfalaki/ZI.
+# Required Packages
+To implement these applications, you need the ZI and DPCri packages, which are available at the following URLs:
 
- The codes can be found at https://github.com/tbaghfalaki/DPCri.
+* ZI package:  https://github.com/tbaghfalaki/ZI.
 
+* DPCri package: https://github.com/tbaghfalaki/DPCri.
 
-There are two applications in this paper, pregnancy data and AIDS data, where both data are available and public. Here, the implementation and computing the risk prediction are given. 
+# Implementation Steps
 
+1. Pregnancy Data
+The code for implementing the pregnancy data application involves fitting a Zero-Inflated Joint Model and computing the risk prediction. This analysis of pregnency data is presented [here](/Exam1.md)
 
-This analysis of pregnency data is presented [here](/Exam1.md)
-
-
-This analysis of AIDS data is presented [here](/Exam2.md)
+3. AIDS Data
+The code for the AIDS data application similarly involves fitting a Zero-Inflated Joint Model and computing the risk prediction. This analysis of AIDS data is presented [here](/Exam2.md)
