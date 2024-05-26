@@ -259,3 +259,41 @@ A6 = Criteria(
   cause = 1
 )$Cri
 ```
+The R code for ZIP and ZIGP follows the same structure as described above.
+
+Finally, the individual dynamic prediction (DP) is as follows:
+```
+DPplot1(Z1NB,
+        s = 10, id_new = 184, by = .5, mi = 10,
+        Marker_lab="CD4", Time_lab="Time (Month)",
+        n.chains = 1, n.iter = 1000, n.burnin = 500,
+        dataLong = dataLong_v, dataSurv = dataSurv_v
+)
+title("# 184, ZINB", font.main=2, cex.main=1)
+
+
+
+DPplot1(Z1NB,
+        s = 4, id_new = 378, by = .5, mi = 10,
+        Marker_lab="CD4", Time_lab="Time (Month)",
+        n.chains = 1, n.iter = 1000, n.burnin = 500,
+        dataLong = dataLong_v, dataSurv = dataSurv_v
+)
+title("# 378, ZINB", font.main=2, cex.main=1)
+
+```
+
+resulting in the following plot:
+
+
+<img src="/Figure/aids_plot.png" alt="Description" width="600" height="500">
+
+
+
+
+
+
+
+
+
+
