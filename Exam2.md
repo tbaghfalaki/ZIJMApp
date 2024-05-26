@@ -286,7 +286,7 @@ title("# 378, ZINB", font.main=2, cex.main=1)
 resulting in the following plot:
 
 
-<img src="/Figure/aids_plot.png" alt="Description" width="600" height="500">
+<img src="/Figure/ind_aids.png" alt="Description" width="600" height="500">
 
 
 
