@@ -15,3 +15,7 @@ The code for implementing the pregnancy data application involves fitting a Zero
 
 3. AIDS Data
 The code for the AIDS data application similarly involves fitting a Zero-Inflated Joint Model and computing the risk prediction. This analysis of AIDS data is presented [here](/Exam2.md)
+
+
+### Reference 
+Ganjali, M., Baghfalaki, T. & Balakrishnan, N. (2024). Joint Modeling of Zero-Inflated Longitudinal Measurements and Time-to-Event Outcomes with Applications to Dynamic Prediction. *Submitted*.
