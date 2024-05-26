@@ -161,10 +161,9 @@ DD <- DP_SRE_CI(
 )
 ```
 
-
 ```
 # Generate dynamic predictions for patient #10055
-par(mfrow=c(1,2))
+par(mfrow=c(2,1))
 
 DPplot2(ZNB,
         s = 30, id_new = 10055, by = 1, mi = 10, digits=0,
@@ -184,3 +183,12 @@ DPplot2(ZNB,
 )
 title("ZINB", font.main=2, cex.main=1)
 ```
+
+Finally, the individual dynamic prediction (DP) is as follows:
+
+![](/Figure/preg_plot.png)
+
+
+
+
+
