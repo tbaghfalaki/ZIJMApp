@@ -188,6 +188,13 @@ Finally, the individual dynamic prediction (DP) is as follows:
 
 <img src="/Figure/preg_plot.png" alt="Description" width="600" height="500">
 
+The R code for ZIP and ZIGP follows the same structure as described above.
+
+
+
+
+
+
 
 
 
