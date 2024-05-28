@@ -8,7 +8,7 @@ To implement these applications, you need the ZI and DPCri packages, which are a
 
 * DPCri package: https://github.com/tbaghfalaki/DPCri.
 
-# Implementation Steps
+# Implementation 
 
 1. Pregnancy Data
 The code for implementing the pregnancy data application involves fitting a Zero-Inflated Joint Model and computing the risk prediction. This analysis of pregnency data is presented [here](/Exam1.md)
