@@ -1,4 +1,4 @@
-R code for ZINB joint modeling
+R code for ZINB joint modeling for AIDS data
 ---------------
 
 ```
