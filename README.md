@@ -18,4 +18,4 @@ The code for the AIDS data application similarly involves fitting a Zero-Inflate
 
 
 ### Reference 
-Ganjali, M., Baghfalaki, T. & Balakrishnan, N. (2024). Joint Modeling of Zero-Inflated Longitudinal Measurements and Time-to-Event Outcomes with Applications to Dynamic Prediction. *SMMR*, accepted.
+Ganjali, M., Baghfalaki, T. & Balakrishnan, N. (2024). Joint Modeling of Zero-Inflated Longitudinal Measurements and Time-to-Event Outcomes with Applications to Dynamic Prediction. *SMMR*, DOI: https://doi.org/10.1177/09622802241268466. Available at https://journals.sagepub.com/doi/full/10.1177/09622802241268466
